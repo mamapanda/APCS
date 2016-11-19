@@ -38,6 +38,7 @@ public class AccountTester
                 case 0:
                     break loop;
             }
+            System.out.println();
         }
     }
 }
