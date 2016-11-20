@@ -28,25 +28,54 @@
  *  -in Java, method calls are always determined by the type of the actual object, not the type of object reference
  *    Ex. Suppose both BankAccount and SavingsAccount have deposit methods.
  */
+
+/**
+ * Simulates a Bank Account
+ *
+ * @author Daniel Phan
+ * @version 11.21.16
+ */
 public class BankAccount
 {
-   private double balance;
+    private double balance; //the account balance
 
-  public BankAccount(double balance)
-  {
-    this.balance = balance;
-  } 
+    /**
+     * Constructs a new BankAccount with the given balance
+     * (Postcondition: balance is intialized)
+     * @param balance the initial balance
+     * (Precondition: balance is declared)
+     */
+    public BankAccount(double balance) {
+      this.balance = balance;
+    }
 
-  public void deposit(double amount)
-  {
-    balance += amount;
-  }
-  public double getBalance()
-  {
-    return balance;
-  }
-  public void setBalance(double balance)
-  {
-    this.balance = balance;
-  }
+    /**
+     * Deposits a given amount of money into the account
+     * (Postcondition: amount is added to balance)
+     * @param amount the amount to deposit
+     * (Precondition: amount >= 0)
+     */
+    public void deposit(double amount) {
+      balance += amount;
+    }
+
+    /**
+     * Returns the balance
+     * (Postcondition: balance is returned)
+     * @return the account's balance
+     * (Precondition: balance is defined)
+     */
+    public double getBalance() {
+      return balance;
+    }
+
+    /**
+     * Updates the balance
+     * (Postcondition: this.balance == balance)
+     * @param balance the new balance
+     * (Precondition: balance > 0)
+     */
+    public void setBalance(double balance) {
+      this.balance = balance;
+    }
 }

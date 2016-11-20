@@ -5,7 +5,7 @@
  * @version  11.21.16
  */
 
-public class TimeDepositAccount extends SavingsAccount{
+public class TimeDepositAccount extends SavingsAccount {
     private static final int EARLY_PENALTY = 10; //the penalty for withdrawing early
     private double interestRate; //the interest rate
     private double months; //the number of months to maturity
@@ -37,6 +37,7 @@ public class TimeDepositAccount extends SavingsAccount{
 
     /**
      * Withdraws a certain amount of money from this account, if possible
+     * $10 is deducted from the account balance if the account has not matured
      * (Postcondition: the amount withdrawn is returned)
      * @param amount the amount of money to withdraw
      * @return the amount withdrawn; 0 if there is not enough money
@@ -44,7 +45,8 @@ public class TimeDepositAccount extends SavingsAccount{
      */
     public double withdraw(double amount){
         double newBalance = getBalance() - amount - (months > 0 ? EARLY_PENALTY : 0);
+        if(months > 0) System.out.println("Early Withdrawal Penalty: $10");
         if(newBalance >= 0) setBalance(newBalance);
-        return newBalance < 0 ? 0 : amount;
+        return newBalance < 0 ? -1 : amount;
     }
 }

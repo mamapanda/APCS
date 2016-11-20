@@ -27,13 +27,13 @@ public class AccountTester
                 case 2:
                     System.out.print("Amount: ");
                     double withdrawal = tda.withdraw(in.nextDouble());
-                    System.out.println(withdrawal == 0 ? "Not enough money" : "Money withdrawn");
+                    System.out.println(withdrawal == -1 ? "Not enough money" : "Money withdrawn");
                     break;
                 case 3:
                     tda.addInterest();
                     break;
                 case 4:
-                    System.out.format("Balance: %f\n", tda.getBalance());
+                    System.out.format("Balance: %.2f\n", tda.getBalance());
                     break;
                 case 0:
                     break loop;
