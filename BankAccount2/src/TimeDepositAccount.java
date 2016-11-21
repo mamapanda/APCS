@@ -30,7 +30,7 @@ public class TimeDepositAccount extends SavingsAccount {
      */
     @Override
     public void addInterest() {
-        months--;
+        if(months > 0) months--;
         super.deposit(interestRate * getBalance());
     }
 
@@ -44,7 +44,6 @@ public class TimeDepositAccount extends SavingsAccount {
      */
     public double withdraw(double amount) {
         double newBalance = getBalance() - amount - (months > 0 ? EARLY_PENALTY : 0);
-        if(months > 0) System.out.println("Early Withdrawal Penalty: $10");
         if(newBalance >= 0) setBalance(newBalance);
         return newBalance < 0 ? -1 : amount;
     }
