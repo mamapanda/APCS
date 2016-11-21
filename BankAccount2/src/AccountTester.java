@@ -1,3 +1,10 @@
+/**
+ * Class to run TimeDepositAccount
+ *
+ * @author Daniel Phan
+ * @version 11.21.16
+ */
+
 import java.util.Scanner;
 
 public class AccountTester
