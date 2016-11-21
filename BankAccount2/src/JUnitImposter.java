@@ -6,7 +6,7 @@
  */
 //how the fuck do we import JUnit stuff
 public class JUnitImposter {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         TimeDepositAccount tda = new TimeDepositAccount(1000.10, 0.2, 4);
         tda.addInterest();
         AssertEquals(tda.getBalance(), 1200.12, 12);
@@ -24,17 +24,16 @@ public class JUnitImposter {
         AssertEquals(tda.getBalance(), 1546.77, 24);
         tda.withdraw(200);
         AssertEquals(tda.getBalance(), 1346.77, 26);
+        tda.addInterest();
+        AssertEquals(tda.getBalance(), 1616.12, 28);
     }
-    static void AssertEquals(double item1, double item2, int line){
+    static void AssertEquals(double item1, double item2, int line) throws Exception {
         String balance = String.format("%.2f", item1);
-        if(!balance.equals(item2 + ""))
-            try {
-                throw new Exception("Mismatch at line " + line);
-            } catch (Exception e) {
-                System.out.println("\u001B[31m" + e.getMessage());
-                System.out.println("Expected: " + item2);
-                System.out.println("Actual: " + item1 + "\u001B[0m");
-                System.exit(666);
-            }
+        if(!balance.equals(item2 + "")) {
+            String errorMessage = String.format(
+                    "Mismatch at line %d\nExpected: %s\nActual: %s", line, item2 + "", balance
+            );
+            throw new Exception(errorMessage);
+        }
     }
 }
