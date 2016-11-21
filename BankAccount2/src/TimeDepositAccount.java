@@ -7,7 +7,7 @@
 public class TimeDepositAccount extends SavingsAccount {
     private static final int EARLY_PENALTY = 10; //the penalty for withdrawing early
     private double interestRate; //the interest rate
-    private double months; //the number of months to maturity
+    private int months; //the number of months to maturity
 
     /**
      * Creates a new TimeDepositAccount with the given initial balance, interest rate, and months
@@ -17,7 +17,7 @@ public class TimeDepositAccount extends SavingsAccount {
      * @param months the number of months to maturity
      * (Precondition: balance, interestRate, and months are initialized)
      */
-    public TimeDepositAccount(double balance, double interestRate, double months) {
+    public TimeDepositAccount(double balance, int months, double interestRate) {
         super(balance);
         this.interestRate = interestRate;
         this.months = months;

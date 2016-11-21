@@ -16,7 +16,7 @@ public class AccountTester
         System.out.print("Interest Rate: ");
         double interest = in.nextDouble();
         System.out.print("Months: ");
-        TimeDepositAccount tda = new TimeDepositAccount(amount, interest, in.nextDouble());
+        TimeDepositAccount tda = new TimeDepositAccount(amount, in.nextInt(), interest);
         loop:
         while (true) {
             System.out.println();

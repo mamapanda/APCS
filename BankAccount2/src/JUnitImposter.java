@@ -7,7 +7,7 @@
 //how the fuck do we import JUnit stuff
 public class JUnitImposter {
     public static void main(String[] args) throws Exception {
-        TimeDepositAccount tda = new TimeDepositAccount(1000.10, 0.2, 4);
+        TimeDepositAccount tda = new TimeDepositAccount(1000.10, 4, 0.2);
         tda.addInterest();
         AssertEquals(tda.getBalance(), 1200.12, 12);
         tda.deposit(205);
