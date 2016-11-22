@@ -56,7 +56,7 @@ public class BankAccount
      * (Precondition: amount >= 0)
      */
     public void deposit(double amount) {
-      balance += amount;
+        if(amount >= 0) balance += amount;
     }
 
     /**

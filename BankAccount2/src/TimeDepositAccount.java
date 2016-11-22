@@ -43,6 +43,7 @@ public class TimeDepositAccount extends SavingsAccount {
      * (Precondition: amount >= 0)
      */
     public double withdraw(double amount) {
+        if(amount < 0) return 0;
         double newBalance = getBalance() - amount - (months > 0 ? EARLY_PENALTY : 0);
         if(newBalance >= 0) setBalance(newBalance);
         return newBalance < 0 ? -1 : amount;

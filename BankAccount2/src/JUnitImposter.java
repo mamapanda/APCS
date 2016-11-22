@@ -16,6 +16,10 @@ public class JUnitImposter {
         AssertEquals(tda.getBalance(), 895.12, 16);
         tda.withdraw(3000);
         AssertEquals(tda.getBalance(), 895.12, 18);
+        tda.withdraw(-500);
+        AssertEquals(tda.getBalance(), 895.12, 18);
+        tda.deposit(-500);
+        AssertEquals(tda.getBalance(), 895.12, 18);
         for(int i = 0; i < 2; i++){
             tda.addInterest();
         }
