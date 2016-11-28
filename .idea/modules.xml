@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/Rectangle/Rectangle.iml" filepath="$PROJECT_DIR$/Rectangle/Rectangle.iml" />
       <module fileurl="file://$PROJECT_DIR$/RoachPopulation/RoachPopulation.iml" filepath="$PROJECT_DIR$/RoachPopulation/RoachPopulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/Student/Student.iml" filepath="$PROJECT_DIR$/Student/Student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Worker/Worker.iml" filepath="$PROJECT_DIR$/Worker/Worker.iml" />
       <module fileurl="file://$PROJECT_DIR$/_APCS.iml" filepath="$PROJECT_DIR$/_APCS.iml" />
     </modules>
   </component>

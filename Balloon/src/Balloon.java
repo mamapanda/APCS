@@ -5,7 +5,6 @@
 * @author(Daniel Phan)
 * @version(1)
 */
-import java.util.Scanner;
 public class Balloon
 {
 	double airAmount; //amount of air inside balloon

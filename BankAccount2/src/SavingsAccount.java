@@ -7,7 +7,7 @@
 public class SavingsAccount extends BankAccount {
     //private double balance; //not recommended
     private double interestRate; //the interest rate of the account
-    /**
+    /*
      * SavingsAccount automatically inherits all methods and instance variables of BankAccount
      * except [constructor, ...]
      */
@@ -29,5 +29,17 @@ public class SavingsAccount extends BankAccount {
      */
     public void addInterest() {
         super.deposit(interestRate * getBalance());
+    }
+
+    @Override
+    public double withdraw(double amount) {
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Hello. I am Jason. " +
+                "Lonely, I am very lonely, " +
+                "I have nobody to call my own.";
     }
 }

@@ -5,10 +5,8 @@
  * @version (a version number or a date)
  */
 import java.util.Scanner;
-public class PersonalBanking
-{
-    public static void main(String[] args)
-    {
+public class PersonalBanking {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter initial balance, maturity month count, and interest: ");
         double balance = input.nextDouble();
@@ -52,8 +50,4 @@ public class PersonalBanking
             }
         }
     }
-                
-            
-        
-   
 }
