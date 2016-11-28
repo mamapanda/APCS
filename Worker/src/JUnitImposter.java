@@ -14,8 +14,8 @@ public class JUnitImposter {
         for(Worker w: workers) {
             AssertEquals(w.computePay(39), 438.36, 13);
         }
-        AssertEquals(workers[0].computePay(66), 887.96, 15);
-        AssertEquals(workers[1].computePay(66), 741.84, 16);
+        AssertEquals(workers[0].computePay(66), 887.96, 17);
+        AssertEquals(workers[1].computePay(66), 741.84, 18);
     }
     static void AssertEquals(double actual, double expected, int line) throws Exception {
         String actualRounded = String.format("%.2f", actual);
