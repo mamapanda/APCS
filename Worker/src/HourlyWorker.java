@@ -1,5 +1,5 @@
 /**
- * Represents an hourly worker
+ * Represents an hourly worker that earns 1.5x the wage for hours over 40
  *
  * @author Daniel Phan
  * @version 11.28.16

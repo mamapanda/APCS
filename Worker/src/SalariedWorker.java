@@ -1,5 +1,5 @@
 /**
- * Represents a salaried worker
+ * Represents a salaried worker that earns the regular wage per hours worked
  *
  * @author Daniel Phan
  * @version 11.28.16

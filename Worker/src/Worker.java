@@ -1,5 +1,5 @@
 /**
- * Represents a worker
+ * Represents a paid worker
  *
  * @author Daniel Phan
  * @version 11.28.16
