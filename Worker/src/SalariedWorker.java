@@ -17,7 +17,7 @@ public class SalariedWorker extends Worker {
     }
 
     /**
-     * Computes the worker's pay based on an amount of weekly hours worked
+     * Computes the worker's pay based on an 40 worked hours
      * (Postcondition: the money the worker earned is returned)
      * @param hours the weekly hours worked
      * @return the worker's pay based on the amount of weekly hours worked
@@ -25,6 +25,6 @@ public class SalariedWorker extends Worker {
      */
     @Override
     public double computePay(int hours) {
-        return super.getWage() * hours;
+        return super.getWage() * 40;
     }
 }
