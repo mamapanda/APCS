@@ -11,14 +11,14 @@ public class Commission extends Hourly {
     /**
      * Constructs a new Commission with the given name, address,
      * phone number, social security number, wage, and commission
-     * (Postcondition: the class's fields are all initialized)
+     * (Postcondition: all of Commission's fields are initialized)
      * @param eName the employee's name
      * @param eAddress the employee's address
      * @param ePhone the employee's phone number
      * @param socSecNumber the employee's social security number
      * @param wage the employee's wage
      * @param commission the employee's commission rate
-     * (Precondition: the class's fields are all declared)
+     * (Precondition: none of the strings are empty, wage > 0, and commission > 0)
      */
     public Commission(String eName, String eAddress, String ePhone,
                   String socSecNumber, double wage, double commission) {
@@ -31,7 +31,7 @@ public class Commission extends Hourly {
      * Returns a string containing the worker's information
      * (Postcondition: the string containing the worker's information is returned)
      * @return a string containing the worker's information
-     * (Precondition: all of this class's fields are defined)
+     * (Precondition: super.toString() and totalSales are defined)
      */
     @Override
     public String toString() {
@@ -52,7 +52,7 @@ public class Commission extends Hourly {
      * Calculates and returns the employee's pay
      * (Postcondition: pay >= 0, totalSales == 0)
      * @return the employee's pay
-     * (Precondition: super.pay() > 0, 0 <= commissionRate < 1, totalSales >= 0)
+     * (Precondition: super.pay() is defined, 0 < commissionRate, totalSales >= 0)
      */
     @Override
     public double pay() {
