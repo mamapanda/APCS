@@ -35,7 +35,7 @@ public class Commission extends Hourly {
      */
     @Override
     public String toString() {
-        return String.format("%s\nTotal Sales: %.2f", super.toString(), this.totalSales);
+        return String.format("%s\nTotal Sales: $%.2f", super.toString(), this.totalSales);
     }
 
     /**
