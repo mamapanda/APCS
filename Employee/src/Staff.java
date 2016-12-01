@@ -10,7 +10,7 @@ public class Staff {
     // Sets up the list of staff members.
     //-----------------------------------------------------------------
     public Staff() {
-        staffList = new StaffMember[8];
+        staffList = new StaffMember[9];
         staffList[0] = new Executive("Sam", "123 Main Line",
                 "555-0469", "123-45-6789", 2423.07);
         staffList[1] = new Employee("Carla", "456 Off Line",
@@ -23,16 +23,20 @@ public class Staff {
                 "555-8374");
         staffList[5] = new Volunteer("Cliff", "321 Duds Lane",
                 "555-7282");
-        staffList[6] = new Commission("Kenny", "123 Street Road",
-                "123-4567", "123-45-6789", 6.25, 0.2);
-        staffList[7] = new Commission("Bob", "444 Fourth Lane",
-                "444-4444", "444-44-4444", 9.75, 0.15);
+        staffList[6] = new Commission("Taeyang", "123 Street Road",
+                "123-4567", "123-45-6789", 10, 0.5);
+        staffList[7] = new Commission("Seungri", "444 Fourth Lane",
+                "444-4444", "444-44-4444", 20, 1);
+        staffList[8] = new Commission("G-Dragon", "321 Road Street",
+                "555-5555", "555-55-5555", 30, 0.25);
         ((Executive) staffList[0]).awardBonus(500.00);
         ((Hourly) staffList[3]).addHours(40);
-        ((Commission) staffList[6]).addHours(35);
-        ((Commission) staffList[6]).addSales(400);
-        ((Commission) staffList[7]).addHours(40);
-        ((Commission) staffList[7]).addSales(950);
+        ((Commission) staffList[6]).addHours(40);
+        ((Commission) staffList[6]).addSales(100);
+        ((Commission) staffList[7]).addHours(30);
+        ((Commission) staffList[7]).addSales(1000);
+        ((Commission) staffList[8]).addHours(10);
+        ((Commission) staffList[8]).addSales(10);
     }
 
     //-----------------------------------------------------------------
