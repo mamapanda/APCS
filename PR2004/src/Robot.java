@@ -15,8 +15,8 @@ public class Robot {
     /**
      * Constructs a new robot with the given hall of items, position, and direction
      * (Postcondition: this.hall, this.pos, and this.facingRight are initialized)
-     * @param hall the hall of items
-     * @param pos the position of the robot in the hall
+     * @param hall        the hall of items
+     * @param pos         the position of the robot in the hall
      * @param facingRight whether or not the robot is facing right
      * (Precondition: hall is not null, and pos is a valid index in hall)
      */
@@ -42,15 +42,14 @@ public class Robot {
      * (Precondition: hall is not null, and pos is a valid index for hall)
      */
     private void move() {
-        if(hall[pos] > 0) {
+        if (hall[pos] > 0) {
             hall[pos]--;
         }
-        if(hall[pos] == 0) {
-            if(forwardMoveBlocked()) {
+        if (hall[pos] == 0) {
+            if (forwardMoveBlocked()) {
                 facingRight = !facingRight;
-            }
-            else {
-                pos += facingRight ? 1: -1;
+            } else {
+                pos += facingRight ? 1 : -1;
             }
         }
     }
@@ -63,7 +62,7 @@ public class Robot {
      */
     public int clearHall() {
         int moves = 0;
-        while(!hallIsClear()) {
+        while (!hallIsClear()) {
             move();
             moves++;
         }

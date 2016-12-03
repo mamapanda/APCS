@@ -1,6 +1,5 @@
 /**
  * Tests the Kennel class
- *
  * @author Daniel Phan
  * @version 12.1.16
  */
